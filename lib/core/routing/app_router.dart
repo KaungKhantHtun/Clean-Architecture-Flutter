@@ -1,25 +1,23 @@
+import 'package:clean_architecture_flutter/core/routing/route_names.dart';
 import 'package:clean_architecture_flutter/features/auth/presentation/pages/login_page.dart';
-import 'package:clean_architecture_flutter/features/user/presentation/pages/profile_page.dart';
+import 'package:clean_architecture_flutter/features/auth/presentation/pages/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class RouteService {
-  static String initialPath = "/login";
-  static String homePagePath = "/profile";
-
+class AppRouter {
   static final GoRouter router = GoRouter(
-    initialLocation: '/login',
+    initialLocation: RouteNames.loginPath,
     routes: <RouteBase>[
       GoRoute(
-        path: '/login',
+        path: RouteNames.loginPath,
         builder: (BuildContext context, GoRouterState state) {
           return const LoginPage();
         },
         routes: <RouteBase>[
           GoRoute(
-            path: '/profile',
+            path: RouteNames.signUpPath,
             builder: (BuildContext context, GoRouterState state) {
-              return const ProfilePage();
+              return const SingUpPage();
             },
           ),
         ],

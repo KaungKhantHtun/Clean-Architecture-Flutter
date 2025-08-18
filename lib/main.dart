@@ -1,4 +1,4 @@
-import 'package:clean_architecture_flutter/core/routes/route_service.dart';
+import 'package:clean_architecture_flutter/core/routing/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +11,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: RouteService.router,
+      routerConfig: AppRouter.router,
     );
   }
 }
