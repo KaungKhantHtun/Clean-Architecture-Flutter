@@ -1,5 +1,6 @@
 import 'package:clean_architecture_flutter/core/constants/api_response.dart';
 import 'package:clean_architecture_flutter/core/enum/datasource_enum.dart';
+import 'package:clean_architecture_flutter/core/errors/failures.dart';
 import 'package:clean_architecture_flutter/core/extensions/datasource_extensions.dart';
 import 'package:dio/dio.dart';
 

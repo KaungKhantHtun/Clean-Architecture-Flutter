@@ -1,11 +1,6 @@
 import 'package:clean_architecture_flutter/core/constants/api_response.dart';
 import 'package:clean_architecture_flutter/core/enum/datasource_enum.dart';
-
-class Failure {
-  int code; // 200, 201, 400, 303..500 and so on
-  String message; // error , success
-  Failure(this.code, this.message);
-}
+import 'package:clean_architecture_flutter/core/errors/failures.dart';
 
 extension DataSourceExtension on DataSource {
   Failure getFailure() {
