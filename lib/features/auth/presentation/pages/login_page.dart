@@ -1,3 +1,6 @@
+import 'package:clean_architecture_flutter/core/extensions/string_extensions.dart';
+import 'package:easy_localization/easy_localization.dart' show BuildContextEasyLocalizationExtension;
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -5,6 +8,17 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: Text("Hello".tr)),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ElevatedButton.icon(onPressed: () => context.setLocale(Locale('en', 'TH')), label: Text('TH')),
+            ElevatedButton.icon(onPressed: () => context.setLocale(Locale('en', 'US')), label: Text('US')),
+          ],
+        ),
+      ),
+    );
   }
 }
